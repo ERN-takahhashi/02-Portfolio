@@ -1,5 +1,18 @@
 @use "variable" as v;
 
+html {
+  font-family:
+    "ヒラギノ角ゴ ProN W3", "Noto Sans JP", sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, Roboto, "Droid Sans", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
+
+  font-size: 62.5%;
+}
+
 body {
-  font-size: v.$font-base;
+  line-height: 1;
+  font-size: 16px;
+  color: red;
+}
+
+a {
+  text-decoration: none;
 }

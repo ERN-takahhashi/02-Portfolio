@@ -1,0 +1,213 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+html {
+  font-family: "ヒラギノ角ゴ ProN W3", "Noto Sans JP", sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, Roboto, "Droid Sans", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-size: 16px;
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+.l-header {
+  padding: 20px;
+}
+
+.l-main {
+  height: 100vh;
+}
+
+.l-footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.c-logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+.c-nav {
+  display: none;
+}
+.c-nav__list {
+  list-style: none;
+}
+.c-nav__item {
+  margin: 1rem 0;
+}
+.c-nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .c-nav {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+.c-btn {
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+.c-btn__text {
+  font-weight: bold;
+}
+.c-btn--primary {
+  color: #fff;
+}
+
+.c-sectionTitle {
+  font-family: Barlow Condensed, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #FFF;
+  text-align: center;
+}
+
+.p-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 375px);
+  height: 100vh;
+  background: url("...") center/cover no-repeat;
+  color: #fff;
+}
+.p-sidebar__inner {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+@media (max-width: 900px) {
+  .p-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .p-sidebar__inner {
+    text-align: center;
+  }
+}
+
+.p-main {
+  margin-left: calc(100% - 375px);
+  width: 375px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #000;
+}
+@media (max-width: 900px) {
+  .p-main {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+}
+.p-main__section {
+  margin-bottom: 6rem;
+}
+.p-main__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.p-main__text {
+  line-height: 1.8;
+}
+
+.p-campaign__content {
+  padding: 0 1.6rem;
+}
+.p-campaign__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+  justify-items: center;
+}
+.p-campaign__item {
+  width: 150px;
+}
+.p-campaign__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+.p-campaign__imageInner {
+  overflow: hidden;
+}
+.p-campaign__imageInner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+.p-campaign__link:hover .p-campaign__imageInner img {
+  transform: scale(1.15);
+}
+.p-campaign__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.p-campaign__textDate {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-size: 1em;
+  font-family: "Barlow Condensed", -apple-system, Segoe UI, Helvetica Neue, sans-serif;
+  font-weight: 400;
+}
+.p-campaign__textTitle {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.4;
+}
+
+.u-mt20 {
+  margin-top: 20px;
+}
+
+.u-mb20 {
+  margin-bottom: 20px;
+}
+
+.u-text-center {
+  text-align: center;
+}

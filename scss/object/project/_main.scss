@@ -1,0 +1,31 @@
+@use "../../foundation/variable" as v;
+
+.p-main {
+  margin-left: calc(100% - #{v.$pc-main-width});
+  width: v.$pc-main-width;
+  height: 100vh;
+  overflow-y: auto;
+  // あとで外してみて挙動見たい
+
+  background: #000;
+
+  @media (max-width: v.$breakpoint-md) {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  &__section {
+    margin-bottom: 6rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    line-height: 1.8;
+  }
+}

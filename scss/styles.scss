@@ -1,13 +1,29 @@
+@use "foundation/reset";
 @use "foundation/variable";
 @use "foundation/mixin";
-@use "foundation/reset";
 @use "foundation/base";
+
 
 @use "layout/header";
 @use "layout/main";
 @use "layout/footer";
 
+
+@use "object/component/logo";
+@use "object/component/nav";
 @use "object/component/btn";
 @use "object/component/card";
-@use "object/project/top-hero";
-@use "object/utility/spacing";
+@use "object/component/sectionTitle";
+
+
+@use "object/project/sidebar";
+@use "object/project/main" as p-main;
+@use "object/project/mv";
+@use "object/project/campaign";
+@use "object/project/product";
+@use "object/project/brand";
+@use "object/project/ambassador";
+
+
+@use "object/utility/gap";
+@use "object/utility/utility";

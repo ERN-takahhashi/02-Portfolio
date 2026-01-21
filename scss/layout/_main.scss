@@ -1,3 +1,12 @@
+@use "../foundation/variable" as v;
+
 .l-main {
-  padding: 40px 20px;
+  // display: grid;
+  // grid-template-columns: 1fr v.$pc-main-width;
+  // // 「画面を横に2分割して、左は残り全部・右は固定幅」
+  height: 100vh;
+
+  // @media (max-width: v.$breakpoint-md) {
+  //   grid-template-columns: 1fr;
+  // }
 }

@@ -1,0 +1,25 @@
+@use "../../foundation/variable" as v;
+
+.c-nav {
+  display: none; // ← PCでは非表示
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin: 1rem 0;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: v.$breakpoint-md) {
+  .c-nav {
+    display: block;
+    margin-top: 2rem;
+  }
+}

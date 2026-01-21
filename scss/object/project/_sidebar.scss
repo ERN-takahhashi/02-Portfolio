@@ -1,0 +1,27 @@
+@use "../../foundation/variable" as v;
+
+.p-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - #{v.$pc-main-width}); // 左の幅
+  height: 100vh;
+  background: url("...") center / cover no-repeat;
+  color: #fff;
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+  }
+
+  @media (max-width: v.$breakpoint-md) {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    &__inner {
+      text-align: center;
+    }
+  }
+}
