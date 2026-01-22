@@ -1,0 +1,46 @@
+.p-product {
+  // padding: 60px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+
+  &__item {
+    transition: filter .3s ease;
+
+    &:hover {
+      filter: brightness(0.8);
+
+      .c-button__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__image {
+    width: 84px;
+    height: 210px;
+    display: block;
+    object-fit: contain;
+  }
+
+  &__date {
+    font-size: 13px;
+    opacity: .7;
+    margin-bottom: 6px;
+  }
+
+
+  &__name {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  &__area {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}

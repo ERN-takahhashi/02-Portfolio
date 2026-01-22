@@ -6,8 +6,9 @@
   left: 0;
   width: calc(100% - #{v.$pc-main-width}); // 左の幅
   height: 100vh;
-  background: url("...") center / cover no-repeat;
-  color: #fff;
+  background-color: aqua;
+  background: url("../images/02_logo.png") center / cover no-repeat;
+  // color: #fff;
 
   &__inner {
     position: relative;

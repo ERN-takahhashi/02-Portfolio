@@ -1,12 +1,20 @@
-.c-btn {
-  padding: 12px 20px;
-  border-radius: 4px;
+.c-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 
-  &__text {
-    font-weight: bold;
+
+  &--ingredient {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
   }
 
-  &--primary {
-    color: #fff;
+
+  &__icon {
+    display: inline-block;
+    transition: transform .3s ease;
   }
 }

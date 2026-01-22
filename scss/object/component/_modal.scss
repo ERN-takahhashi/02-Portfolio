@@ -1,0 +1,92 @@
+.c-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+
+
+  &.is-active {
+    display: block;
+  }
+
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .85);
+    backdrop-filter: blur(4px);
+  }
+
+
+  &__content {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: 5vh auto;
+    padding: 40px;
+    background: #000;
+    border-radius: 12px;
+
+
+    box-shadow:
+      0 0 20px rgba(0, 255, 255, .6),
+      0 0 40px rgba(255, 0, 255, .4);
+
+
+    animation: modalIn .3s ease forwards;
+  }
+
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+
+  &__side {
+    ul {
+      list-style: none;
+    }
+
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+  }
+}
+
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .c-modal__inner {
+    grid-template-columns: 1fr;
+  }
+}

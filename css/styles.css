@@ -60,7 +60,7 @@ a {
   line-height: 1.2;
   margin-bottom: 2rem;
   letter-spacing: 0.05em;
-  color: #000;
+  color: #FFF;
 }
 
 .c-nav {
@@ -83,23 +83,102 @@ a {
     margin-top: 2rem;
   }
 }
-.c-btn {
-  padding: 12px 20px;
-  border-radius: 4px;
-}
-.c-btn__text {
-  font-weight: bold;
-}
-.c-btn--primary {
+.c-button {
+  background: none;
+  border: none;
   color: #fff;
+  cursor: pointer;
+}
+.c-button--ingredient {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.c-button__icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
 .c-sectionTitle {
   font-family: Barlow Condensed, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
-  font-size: 2.7rem;
+  font-size: 2.9rem;
   font-weight: 500;
   color: #FFF;
   text-align: center;
+}
+
+.c-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+}
+.c-modal.is-active {
+  display: block;
+}
+.c-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.c-modal__content {
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  margin: 5vh auto;
+  padding: 40px;
+  background: #000;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(255, 0, 255, 0.4);
+  animation: modalIn 0.3s ease forwards;
+}
+.c-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+.c-modal__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.c-modal__side ul {
+  list-style: none;
+}
+.c-modal__side li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .c-modal__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.u-text-sub {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 16px;
 }
 
 .p-sidebar {
@@ -108,8 +187,8 @@ a {
   left: 0;
   width: calc(100% - 375px);
   height: 100vh;
-  background: url("...") center/cover no-repeat;
-  color: #fff;
+  background-color: aqua;
+  background: url("../images/02_logo.png") center/cover no-repeat;
 }
 .p-sidebar__inner {
   position: relative;
@@ -198,6 +277,41 @@ a {
 .p-campaign__textTitle {
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   line-height: 1.4;
+}
+
+.p-product__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.p-product__item {
+  transition: filter 0.3s ease;
+}
+.p-product__item:hover {
+  filter: brightness(0.8);
+}
+.p-product__item:hover .c-button__icon {
+  transform: rotate(180deg);
+}
+.p-product__image {
+  width: 84px;
+  height: 210px;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.p-product__date {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+.p-product__name {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.p-product__area {
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 
 .u-mt20 {
