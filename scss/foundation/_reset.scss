@@ -24,3 +24,8 @@ img {
   height: auto;
   vertical-align: bottom;
 }
+
+button {
+  margin: 0;
+  font-family: inherit; //親に従う
+}

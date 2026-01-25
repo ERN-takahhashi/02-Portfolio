@@ -1,5 +1,4 @@
 .p-product {
-  // padding: 60px;
 
   &__list {
     display: grid;
@@ -7,15 +6,25 @@
     gap: 12px;
   }
 
+  &__card {
+    appearance: none;
+    padding: 0;
+    border: none;
+    background: transparent;
 
-  &__item {
-    transition: filter .3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFF;
+    cursor: pointer;
 
     &:hover {
-      filter: brightness(0.8);
+      opacity: 0.7;
 
       .c-button__icon {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
       }
     }
   }
@@ -27,20 +36,21 @@
     object-fit: contain;
   }
 
-  &__date {
-    font-size: 13px;
-    opacity: .7;
-    margin-bottom: 6px;
+  &__body {
+    width: 100%;
+    text-align: left;
   }
 
+  &__date {
+    font-size: 13px;
+    opacity: 0.7;
+  }
 
   &__name {
     font-size: 18px;
-    margin-bottom: 6px;
   }
 
   &__area {
     font-size: 14px;
-    margin-bottom: 16px;
   }
 }

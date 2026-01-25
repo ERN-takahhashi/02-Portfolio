@@ -1,20 +1,28 @@
 'use strict';
 
-const modal = document.getElementById('ingredientModal');
-const openButtons = document.querySelectorAll('.c-button--ingredient');
-const closeBtn = document.querySelector('.c-modal__close');
-const overlay = document.querySelector('.c-modal__overlay');
+const cards = document.querySelectorAll('.p-product__card');
+const modal = document.querySelector('.c-modal');
+const ingredientImage = modal.querySelector('.c-modal__ingredientImage');
+const productImage = modal.querySelector('.c-modal__productImage');
+const closeBtn = modal.querySelector('.c-modal__close');
 
-openButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    modal.classList.add('is-active');
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const ingredientSrc = card.dataset.modalIngredient;
+    const productSrc = card.dataset.modalProduct;
+
+    ingredientImage.src = ingredientSrc;
+    productImage.src = productSrc;
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
   });
 });
 
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('is-active');
-});
+function closeModal() {
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+}
 
-overlay.addEventListener('click', () => {
-  modal.classList.remove('is-active');
-});
+closeBtn.addEventListener('click', closeModal);
+
