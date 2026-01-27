@@ -338,11 +338,15 @@ a {
   text-align: left;
 }
 .p-product__date {
+  font-family: Barlow Condensed, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
+  font-weight: 500;
   font-size: 13px;
   opacity: 0.7;
 }
 .p-product__name {
-  font-size: 18px;
+  font-family: Barlow Condensed, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
+  font-weight: 500;
+  font-size: 19px;
 }
 .p-product__area {
   font-size: 14px;

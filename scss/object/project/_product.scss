@@ -1,3 +1,5 @@
+@use "../../foundation/variable" as v;
+
 .p-product {
 
   &__list {
@@ -42,12 +44,16 @@
   }
 
   &__date {
+    font-family: v.$main-font-family;
+    font-weight: v.$main-font-weight;
     font-size: 13px;
     opacity: 0.7;
   }
 
   &__name {
-    font-size: 18px;
+    font-family: v.$main-font-family;
+    font-weight: v.$main-font-weight;
+    font-size: 19px;
   }
 
   &__area {
