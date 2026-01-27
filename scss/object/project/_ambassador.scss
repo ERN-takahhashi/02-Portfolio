@@ -1,7 +1,14 @@
 .p-ambassador {
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
   &__frame {
-    width: 340px;
-    height: 340px;
+    width: 344px;
+    height: 288px;
     background: #FFF;
     clip-path: polygon(5% 0%,
         100% 0%,
@@ -13,6 +20,7 @@
   }
 
   &__fill {
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -22,6 +30,19 @@
         95% 100%,
         0% 100%,
         0% 5%);
+
+    .p-ambassador__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0);
+      transition: 0.3s;
+    }
+
+    &:hover {
+      .p-ambassador__overlay {
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
   }
 
   &__image {
