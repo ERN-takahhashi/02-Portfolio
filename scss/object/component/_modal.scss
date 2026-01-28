@@ -1,27 +1,39 @@
-.c-modal {
+.c-modal__overlay {
   position: fixed;
   inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  z-index: 9999;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.c-modal {
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  transform: translate(-25%, -50%)translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10000;
 
   &.is-open {
     opacity: 1;
     pointer-events: auto;
   }
 
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9);
-  }
-
   &__content {
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 32px;
-    margin: auto;
   }
 
   &__productImage {

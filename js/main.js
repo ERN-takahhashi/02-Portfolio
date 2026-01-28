@@ -2,6 +2,7 @@
 
 const cards = document.querySelectorAll('.p-product__card');
 const modal = document.querySelector('.c-modal');
+const overlay = document.querySelector('.c-modal__overlay');
 const ingredientImage = modal.querySelector('.c-modal__ingredientImage');
 const productImage = modal.querySelector('.c-modal__productImage');
 const closeBtn = modal.querySelector('.c-modal__close');
@@ -15,12 +16,14 @@ cards.forEach(card => {
     productImage.src = productSrc;
 
     modal.classList.add('is-open');
+    overlay.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
   });
 });
 
 function closeModal() {
   modal.classList.remove('is-open');
+  overlay.classList.remove('is-open');
   modal.setAttribute('aria-hidden', 'true');
 }
 

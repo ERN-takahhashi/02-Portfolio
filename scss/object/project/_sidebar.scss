@@ -8,7 +8,12 @@
   height: 100vh;
   background-color: aqua;
   background: url("../images/02_logo.png") center / cover no-repeat;
-  // color: #fff;
+  overflow: hidden;
+
+  &__overlay {
+    display: none;
+    z-index: 10;
+  }
 
   &__inner {
     position: relative;
@@ -16,13 +21,23 @@
     padding: 2rem;
   }
 
-  @media (max-width: v.$breakpoint-md) {
-    position: relative;
-    width: 100%;
-    height: auto;
+  &__logo {
+    position: absolute;
+    top: 23px;
+    left: 16px;
 
-    &__inner {
-      text-align: center;
+    &--link {
+      display: inline-block;
     }
+
+    &--image {
+      height: 20px;
+      object-fit: cover;
+    }
+  }
+
+
+  @media (max-width: v.$breakpoint-md) {
+    display: none;
   }
 }
