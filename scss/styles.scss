@@ -16,6 +16,7 @@
 @use "object/component/sectionTitle";
 @use "object/component/modal";
 @use "object/component/text";
+@use "object/component/snsLinks";
 
 
 @use "object/project/sidebar";
@@ -25,6 +26,8 @@
 @use "object/project/product";
 @use "object/project/brand";
 @use "object/project/ambassador";
+@use "object/project/links";
+@use "object/project/footer" as p-footer;
 
 
 @use "object/utility/gap";

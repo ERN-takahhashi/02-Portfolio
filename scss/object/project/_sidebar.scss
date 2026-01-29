@@ -7,8 +7,9 @@
   width: calc(100% - #{v.$pc-main-width}); // 左の幅
   height: 100vh;
   background-color: aqua;
-  background: url("../images/02_logo.png") center / cover no-repeat;
+  background: url("../images/02_logo_bg_1_S.png") center / cover no-repeat;
   overflow: hidden;
+  transition: background-image 1.5s ease;
 
   &__overlay {
     display: none;

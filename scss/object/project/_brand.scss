@@ -1,0 +1,9 @@
+.p-brand {
+  &__content {
+    padding: 0px 15px;
+
+    &--img {
+      object-fit: contain;
+    }
+  }
+}

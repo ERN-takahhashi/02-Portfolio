@@ -1,4 +1,6 @@
 .p-ambassador {
+  padding: 5px;
+
   &__link {
     display: block;
     width: 100%;
@@ -17,6 +19,7 @@
         0% 100%,
         0% 5%);
     padding: 1px;
+    margin-top: 15.7px;
   }
 
   &__fill {
@@ -56,8 +59,12 @@
     }
   }
 
-  &__name {
-    color: #FFF;
-    text-align: center;
+  &__item {
+    margin-top: 31.5px;
+
+    &--name {
+      color: #FFF;
+      text-align: center;
+    }
   }
 }

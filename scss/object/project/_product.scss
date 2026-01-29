@@ -1,11 +1,13 @@
 @use "../../foundation/variable" as v;
 
 .p-product {
+  padding: 5px;
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    column-gap: 12px;
+    row-gap: 50px;
   }
 
   &__card {
