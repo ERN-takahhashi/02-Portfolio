@@ -54,3 +54,13 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
+
+const hamburger = document.querySelector('.js-hamburger');
+const spMenu = document.querySelector('.p-spMenu');
+
+if (hamburger && spMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-open');
+    spMenu.classList.toggle('is-open');
+  });
+}

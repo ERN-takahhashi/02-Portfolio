@@ -1,0 +1,37 @@
+.p-spMenu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 10000;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    text-align: center;
+  }
+
+  &__sns {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  .p-spMenu.is-open {
+    opacity: 0.8;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+}

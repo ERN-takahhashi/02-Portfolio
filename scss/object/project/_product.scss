@@ -1,6 +1,10 @@
 @use "../../foundation/variable" as v;
 
 .p-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
 
   &__list {
