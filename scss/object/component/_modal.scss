@@ -102,3 +102,43 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .c-modal {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 95vw;
+
+
+    &__content {
+      max-width: 95vw;
+      align-items: center;
+    }
+
+    &__productImage {
+      width: 90px;
+      flex-shrink: 0;
+    }
+
+    &__frame {
+      width: 75vw;
+      max-width: 420px;
+    }
+
+    &__inner {
+      padding: 12px;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    &__ingredientImage {
+      width: 80%;
+    }
+
+    &__close {
+      top: 30px;
+      right: 40px;
+    }
+  }
+}

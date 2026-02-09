@@ -207,6 +207,38 @@ a {
   transform: rotate(90deg);
 }
 
+@media (max-width: 900px) {
+  .c-modal {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 95vw;
+  }
+  .c-modal__content {
+    max-width: 95vw;
+    align-items: center;
+  }
+  .c-modal__productImage {
+    width: 90px;
+    flex-shrink: 0;
+  }
+  .c-modal__frame {
+    width: 75vw;
+    max-width: 420px;
+  }
+  .c-modal__inner {
+    padding: 12px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .c-modal__ingredientImage {
+    width: 80%;
+  }
+  .c-modal__close {
+    top: 30px;
+    right: 40px;
+  }
+}
 .c-text-10px {
   font-size: 1rem;
 }
@@ -437,6 +469,7 @@ a {
 .p-product__body {
   width: 100%;
   text-align: left;
+  margin-top: 10px;
 }
 .p-product__date {
   font-family: Barlow Condensed, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
@@ -447,10 +480,12 @@ a {
 .p-product__name {
   font-family: Barlow Condensed, -apple-system, Segoe UI, Helvetica Neue, sans-serif;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 20px;
+  margin-top: 5px;
 }
 .p-product__area {
-  font-size: 14px;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .p-brand__content {

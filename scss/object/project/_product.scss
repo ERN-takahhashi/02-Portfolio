@@ -47,6 +47,7 @@
   &__body {
     width: 100%;
     text-align: left;
+    margin-top: 10px;
   }
 
   &__date {
@@ -59,10 +60,12 @@
   &__name {
     font-family: v.$main-font-family;
     font-weight: v.$main-font-weight;
-    font-size: 19px;
+    font-size: 20px;
+    margin-top: 5px;
   }
 
   &__area {
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 5px;
   }
 }
