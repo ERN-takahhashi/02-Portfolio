@@ -217,6 +217,7 @@ a {
   .c-modal__content {
     max-width: 95vw;
     align-items: center;
+    gap: 18px;
   }
   .c-modal__productImage {
     width: 90px;
@@ -237,6 +238,24 @@ a {
   .c-modal__close {
     top: 30px;
     right: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .c-modal__content {
+    gap: 8px;
+  }
+  .c-modal__productImage {
+    width: 75px;
+  }
+  .c-modal__close {
+    width: 24px;
+    height: 24px;
+    top: 25px;
+    right: 30px;
+  }
+  .c-modal .c-modal__close::before,
+  .c-modal .c-modal__close::after {
+    width: 26px;
   }
 }
 .c-text-10px {

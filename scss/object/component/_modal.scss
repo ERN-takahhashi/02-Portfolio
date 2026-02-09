@@ -114,6 +114,7 @@
     &__content {
       max-width: 95vw;
       align-items: center;
+      gap: 18px;
     }
 
     &__productImage {
@@ -139,6 +140,30 @@
     &__close {
       top: 30px;
       right: 40px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .c-modal {
+    &__content {
+      gap: 8px;
+    }
+
+    &__productImage {
+      width: 75px;
+    }
+
+    &__close {
+      width: 24px;
+      height: 24px;
+      top: 25px;
+      right: 30px;
+    }
+
+    .c-modal__close::before,
+    .c-modal__close::after {
+      width: 26px;
     }
   }
 }
